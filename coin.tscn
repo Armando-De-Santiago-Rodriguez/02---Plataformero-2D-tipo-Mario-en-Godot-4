@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://ytiqt8utd31x"]
+
+[ext_resource type="Script" uid="uid://dltvc3tk640nw" path="res://coin.gd" id="1_v7riw"]
+[ext_resource type="Texture2D" uid="uid://g3a1s60p8ejq" path="res://art/Consumibles/Icon48.png" id="2_pdq0q"]
+[ext_resource type="AudioStream" uid="uid://br3yo8ybgsobd" path="res://sounds/Retro PickUp 18.wav" id="3_w14il"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkf17"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pdq0q")
+}],
+"loop": true,
+"name": &"Potion",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0vn3t"]
+radius = 20.0
+height = 56.0
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("1_v7riw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_gkf17")
+animation = &"Potion"
+frame_progress = 0.16666657
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_0vn3t")
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_w14il")
+volume_db = -10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

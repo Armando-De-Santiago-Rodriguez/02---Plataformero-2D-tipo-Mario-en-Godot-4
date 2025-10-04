@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl3rdd8oknxot"]
+
+[ext_resource type="Texture2D" uid="uid://bk6ymx4yvn6l3" path="res://art/Terreno/TX Tileset Ground.png" id="1_gagmq"]
+
+[node name="False_wall" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gagmq")
+region_enabled = true
+region_rect = Rect2(130.50922, 298.66272, 150.58301, 129.32422)

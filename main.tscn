@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwfxrkcqxqpf5"]
+
+[ext_resource type="PackedScene" uid="uid://bdxysfwugng1g" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cf462pq0cgqg7" path="res://main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://67iaesjnefog" path="res://level_01.tscn" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://bfq1waegc6fh4" path="res://camera_follow.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://68ljubqburp4" path="res://hud.tscn" id="5_7mycd"]
+[ext_resource type="AudioStream" uid="uid://bo26xnjyprk20" path="res://sounds/DARK ARIA LV2 (Instrumental).mp3" id="6_7mycd"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_lquwl")
+
+[node name="Level_01" parent="." instance=ExtResource("3_1bvp3")]
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+z_index = 1
+position = Vector2(18, 39)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-88, -30)
+zoom = Vector2(3, 3)
+limit_left = -50
+limit_top = -50
+limit_right = 1190
+limit_bottom = 700
+script = ExtResource("3_h2yge")
+
+[node name="HUD" parent="." instance=ExtResource("5_7mycd")]
+
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7mycd")
+volume_db = -15.0
+autoplay = true
+
+[connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]

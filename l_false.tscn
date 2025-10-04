@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ycse76isykox"]
+
+[ext_resource type="Texture2D" uid="uid://bk6ymx4yvn6l3" path="res://art/Terreno/TX Tileset Ground.png" id="1_kowvy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qe5p"]
+size = Vector2(59.5, 31)
+
+[node name="L_false" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kowvy")
+region_enabled = true
+region_rect = Rect2(290.0002, 342.49976, 59.00006, 105.159515)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 37)
+shape = SubResource("RectangleShape2D_8qe5p")

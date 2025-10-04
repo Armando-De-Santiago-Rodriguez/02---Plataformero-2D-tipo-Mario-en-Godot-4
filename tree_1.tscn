@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1m8v72opaacq"]
+
+[ext_resource type="Texture2D" uid="uid://cyhex06xf8le4" path="res://art/Terreno/TX Village Props.png" id="1_087k8"]
+
+[node name="Tree_1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_087k8")
+region_enabled = true
+region_rect = Rect2(829.1763, 437.09094, 161.09656, 176.19525)

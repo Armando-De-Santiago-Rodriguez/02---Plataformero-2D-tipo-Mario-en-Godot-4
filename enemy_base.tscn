@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://clhmrsegpkoh3"]
+
+[ext_resource type="Script" uid="uid://bg07a3x646lvm" path="res://enemy_base.gd" id="1_8nqel"]
+[ext_resource type="AudioStream" uid="uid://e0aldvbr3rtx" path="res://sounds/AnyConv.com__roblox-death-sound-effect.ogg" id="2_edvsq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8nqel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nqel"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8nqel"]
+
+[node name="EnemyBase" type="CharacterBody2D"]
+script = ExtResource("1_8nqel")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8nqel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("RectangleShape2D_8nqel")
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("CircleShape2D_8nqel")
+
+[node name="AttackCooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_edvsq")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

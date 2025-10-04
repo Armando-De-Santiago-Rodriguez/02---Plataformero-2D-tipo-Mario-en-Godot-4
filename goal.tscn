@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3wpcxvqgno12"]
+
+[ext_resource type="Script" uid="uid://wdlyixd2pje4" path="res://goal.gd" id="1_0qle8"]
+[ext_resource type="Texture2D" uid="uid://cyhex06xf8le4" path="res://art/Terreno/TX Village Props.png" id="1_6k3qi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qle8"]
+size = Vector2(89, 96.5)
+
+[node name="Goal" type="Area2D"]
+script = ExtResource("1_0qle8")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6k3qi")
+region_enabled = true
+region_rect = Rect2(26.54065, 157.0751, 101.641235, 103.10675)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.25)
+shape = SubResource("RectangleShape2D_0qle8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

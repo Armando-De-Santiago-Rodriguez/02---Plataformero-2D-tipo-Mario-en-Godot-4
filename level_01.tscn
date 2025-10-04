@@ -1,0 +1,305 @@
+[gd_scene load_steps=15 format=3 uid="uid://67iaesjnefog"]
+
+[ext_resource type="PackedScene" uid="uid://cvlymkpxicglq" path="res://wall_1.tscn" id="1_3imfn"]
+[ext_resource type="PackedScene" uid="uid://cmctxwfopraht" path="res://floor_1.tscn" id="2_iafiv"]
+[ext_resource type="PackedScene" uid="uid://dq3necsyx5br5" path="res://floor_alone.tscn" id="3_kdijb"]
+[ext_resource type="PackedScene" uid="uid://esvxa8yxme7c" path="res://wall_l.tscn" id="4_iafiv"]
+[ext_resource type="PackedScene" uid="uid://ytiqt8utd31x" path="res://coin.tscn" id="5_kdijb"]
+[ext_resource type="PackedScene" uid="uid://ycse76isykox" path="res://l_false.tscn" id="6_qrmce"]
+[ext_resource type="PackedScene" uid="uid://dl7gppoa7aobn" path="res://ogre.tscn" id="7_8q3i6"]
+[ext_resource type="PackedScene" uid="uid://rh87i72d1odh" path="res://soldier.tscn" id="8_qlag8"]
+[ext_resource type="PackedScene" uid="uid://d1m8v72opaacq" path="res://tree_1.tscn" id="9_pl2qr"]
+[ext_resource type="PackedScene" uid="uid://d0r6ij3rddqb4" path="res://tree_2.tscn" id="10_rlskx"]
+[ext_resource type="PackedScene" uid="uid://8t1f1vowgtu4" path="res://bush_1.tscn" id="11_yp1q4"]
+[ext_resource type="PackedScene" uid="uid://cydqedwloaqka" path="res://bush_2.tscn" id="12_o3xv4"]
+[ext_resource type="Texture2D" uid="uid://cgky05xjmxb3i" path="res://art/Terreno/origbig.png" id="13_rlskx"]
+[ext_resource type="PackedScene" uid="uid://b3wpcxvqgno12" path="res://goal.tscn" id="14_yp1q4"]
+
+[node name="Level_01" type="Node"]
+
+[node name="Consumibles" type="Node2D" parent="."]
+
+[node name="Obtenible" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(104, 54)
+
+[node name="Obtenible2" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(309, 53)
+
+[node name="Obtenible3" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(437, 110)
+
+[node name="Obtenible5" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(366, 323)
+
+[node name="Obtenible6" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(8, 255)
+
+[node name="Obtenible7" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(113, 407)
+
+[node name="Obtenible8" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(112, 606)
+
+[node name="Obtenible9" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(174, 318)
+
+[node name="Obtenible10" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(362, 508)
+
+[node name="Obtenible11" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(774, 540)
+
+[node name="Obtenible4" parent="Consumibles" instance=ExtResource("5_kdijb")]
+z_index = 3
+position = Vector2(596, 18)
+
+[node name="Terreno" type="Node2D" parent="."]
+
+[node name="Wall_9" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(491, 382)
+
+[node name="Wall_1" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(619, 14)
+
+[node name="Floor_1" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(49, 77)
+
+[node name="Floor_Alone" parent="Terreno" instance=ExtResource("3_kdijb")]
+z_index = 1
+position = Vector2(436, 134)
+
+[node name="Wall_L" parent="Terreno" instance=ExtResource("4_iafiv")]
+z_index = 1
+position = Vector2(587, 107)
+
+[node name="Floor_2" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(138, 77)
+
+[node name="Floor_3" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(227, 77)
+
+[node name="Floor_4" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(315, 77)
+
+[node name="Floor_Alone2" parent="Terreno" instance=ExtResource("3_kdijb")]
+z_index = 1
+position = Vector2(365, 350)
+
+[node name="Wall_2" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(555, 198)
+
+[node name="Wall_3" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(555, 289)
+
+[node name="Floor_5" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(524, 350)
+
+[node name="Floor_Alone3" parent="Terreno" instance=ExtResource("3_kdijb")]
+z_index = 1
+position = Vector2(238, 350)
+
+[node name="Wall_L2" parent="Terreno" instance=ExtResource("4_iafiv")]
+z_index = 1
+position = Vector2(47, 316)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Floor_6" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(180, 350)
+
+[node name="Wall_4" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(79, 408)
+
+[node name="Wall_5" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(79, 499)
+
+[node name="Wall_6" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(147, 407)
+
+[node name="Wall_7" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(147, 498)
+
+[node name="Floor_7" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(112, 633)
+
+[node name="Floor_8" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(200, 633)
+
+[node name="Floor_Alone4" parent="Terreno" instance=ExtResource("3_kdijb")]
+z_index = 1
+position = Vector2(366, 631)
+
+[node name="Floor_Alone6" parent="Terreno" instance=ExtResource("3_kdijb")]
+z_index = 1
+position = Vector2(1132, 567)
+
+[node name="Wall_8" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(147, 498)
+
+[node name="Floor_Alone5" parent="Terreno" instance=ExtResource("3_kdijb")]
+z_index = 1
+position = Vector2(365, 533)
+
+[node name="Floor_9" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(524, 567)
+
+[node name="Floor_10" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(613, 567)
+
+[node name="Floor_11" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(702, 567)
+
+[node name="Floor_17" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(886, 567)
+
+[node name="Floor_18" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(980, 567)
+
+[node name="Floor_19" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(1069, 567)
+
+[node name="Floor_12" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(790, 567)
+
+[node name="Floor_13" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(524, 442)
+rotation = 3.1415927
+
+[node name="Floor_14" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(613, 442)
+rotation = 3.1415927
+
+[node name="Floor_15" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(702, 442)
+rotation = 3.1415927
+
+[node name="Floor_16" parent="Terreno" instance=ExtResource("2_iafiv")]
+z_index = 1
+position = Vector2(790, 442)
+rotation = 3.1415927
+
+[node name="Wall_L3" parent="Terreno" instance=ExtResource("4_iafiv")]
+z_index = 1
+position = Vector2(429, 597)
+
+[node name="L_false" parent="Terreno" instance=ExtResource("6_qrmce")]
+z_index = 1
+position = Vector2(809, 530)
+
+[node name="Wall_10" parent="Terreno" instance=ExtResource("1_3imfn")]
+z_index = 1
+position = Vector2(824, 460)
+rotation = 3.1415927
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Soldier" parent="Enemies" instance=ExtResource("8_qlag8")]
+z_index = 2
+position = Vector2(276, 47)
+
+[node name="Soldier2" parent="Enemies" instance=ExtResource("8_qlag8")]
+z_index = 2
+position = Vector2(36, 254)
+
+[node name="Soldier3" parent="Enemies" instance=ExtResource("8_qlag8")]
+z_index = 2
+position = Vector2(446, 531)
+
+[node name="Soldier4" parent="Enemies" instance=ExtResource("8_qlag8")]
+z_index = 2
+position = Vector2(913, 532)
+
+[node name="Ogre" parent="Enemies" instance=ExtResource("7_8q3i6")]
+z_index = 2
+position = Vector2(186, 597)
+
+[node name="Ogre2" parent="Enemies" instance=ExtResource("7_8q3i6")]
+z_index = 2
+position = Vector2(663, 529)
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Tree_1" parent="Decoration" instance=ExtResource("9_pl2qr")]
+z_index = 1
+position = Vector2(44, -22)
+
+[node name="Tree_2" parent="Decoration" instance=ExtResource("10_rlskx")]
+z_index = 1
+position = Vector2(365, 268)
+
+[node name="Bush_1" parent="Decoration" instance=ExtResource("11_yp1q4")]
+z_index = 3
+position = Vector2(187, 316)
+
+[node name="Bush_3" parent="Decoration" instance=ExtResource("11_yp1q4")]
+z_index = 3
+position = Vector2(187, 600)
+
+[node name="Bush_2" parent="Decoration" instance=ExtResource("12_o3xv4")]
+z_index = 3
+position = Vector2(210, 47)
+
+[node name="Bush_4" parent="Decoration" instance=ExtResource("12_o3xv4")]
+z_index = 3
+position = Vector2(499, 536)
+
+[node name="Bush_5" parent="Decoration" instance=ExtResource("12_o3xv4")]
+z_index = 3
+position = Vector2(619, 536)
+
+[node name="Bush_6" parent="Decoration" instance=ExtResource("12_o3xv4")]
+z_index = 3
+position = Vector2(756, 535)
+
+[node name="TextureRect" type="TextureRect" parent="Decoration"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -163.0
+offset_right = 1974.0
+offset_bottom = 1133.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("13_rlskx")
+
+[node name="Goal" parent="." instance=ExtResource("14_yp1q4")]
+position = Vector2(1075, 505)

@@ -1,0 +1,119 @@
+[gd_scene load_steps=6 format=3 uid="uid://68ljubqburp4"]
+
+[ext_resource type="Script" uid="uid://dcehywiljhawd" path="res://hud.gd" id="1_37p78"]
+
+[sub_resource type="Gradient" id="Gradient_37p78"]
+offsets = PackedFloat32Array(0, 0.007246377, 0.014492754, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7329948, 0.73299485, 0.7329948, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_64ctp"]
+gradient = SubResource("Gradient_37p78")
+
+[sub_resource type="Gradient" id="Gradient_8sq4i"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_640wx"]
+gradient = SubResource("Gradient_8sq4i")
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_37p78")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_right = 31.0
+offset_bottom = 26.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ScoreLabel" type="Label" parent="."]
+modulate = Color(0.90588236, 0.8862745, 0.07450981, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.5
+offset_right = 44.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Monedas: 0"
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(4, 0.25)
+texture_under = SubResource("GradientTexture2D_64ctp")
+texture_progress = SubResource("GradientTexture2D_640wx")
+
+[node name="GameOverScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0.3647059)
+
+[node name="Label" type="Label" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -24.5
+offset_right = 23.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Game
+Over"
+horizontal_alignment = 1
+
+[node name="YouWinScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="YouWinScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.043137256, 1, 0, 0.3647059)
+
+[node name="Label" type="Label" parent="YouWinScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -24.5
+offset_right = 23.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "You
+Win"
+horizontal_alignment = 1
